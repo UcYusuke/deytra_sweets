@@ -1,0 +1,84 @@
+@use "variable";
+@use "button";
+@use "mixin";
+
+/* header */
+.header{
+    width: 100%;
+    border-bottom: 1px solid variable.$border-beige ;
+    padding: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @include mixin.mq('pc'){
+        padding: 16px;
+    }
+}
+
+.header-logo{
+    width: 200px;
+    margin: 0 auto;
+
+    @include mixin.mq('pc'){
+        margin: 0;
+    }
+}
+
+.header-nav-list{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @include mixin.mq('pc'){
+        gap: 40px;
+    }
+}
+
+.header-nav-link{
+    color: #fff;
+
+    @include mixin.mq('pc'){
+        transition: opacity .3s;
+    }
+
+    &:hover{
+        @include mixin.mq('pc'){
+            opacity: .7;
+        }
+    }
+}
+
+.header-nav-item{
+    /* menuボタンとドロワーメニューを縦並びにしてセンター揃え */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header-inner{
+    @include mixin.mq('pc'){
+        display: flex;
+        max-width: 1080px;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

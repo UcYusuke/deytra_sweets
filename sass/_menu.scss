@@ -1,0 +1,67 @@
+@use "variable";
+@use "button";
+@use "mixin";
+
+/* Menuセクション */
+
+.menu{
+    background-color: variable.$page-background;
+    padding: 80px 0;
+
+    @include mixin.mq('pc'){
+        padding: 0 0 100px;
+    }
+}
+
+.menu-list{
+    margin-top: 40px;
+    @include mixin.mq('pc'){
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.menu-item{
+    cursor: pointer;
+    transition: opacity .3s;
+}
+
+.menu-item:hover{
+    opacity: .7;
+}
+
+.menu-item + .menu-item{
+    margin-top: 60px;
+    @include mixin.mq('pc'){
+        margin-top: 0;
+    }
+}
+
+.menu-text-contents{
+    padding: 16px 10px;
+    text-align: center;
+}
+
+.menu-title-main{
+    display: block;
+    font-size: 18px;
+}
+
+.menu-title-sub{
+    margin-top: 8px;
+    display: block;
+    font-size: 12px;
+    color: variable.$color-gold;
+}
+
+.menu-text{
+    margin-top: 16px;
+    font-size: 14px;
+    color: variable.$color-gold;
+}
+
+
+
+
+
+

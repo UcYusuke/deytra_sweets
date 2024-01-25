@@ -1,0 +1,73 @@
+@use "variable";
+@use "button";
+@use "mixin";
+
+/* footer */
+
+.footer{
+    background-color: variable.$footer-background;
+    padding: 46px 0 0;
+    color: #fff;
+    /* 戻るボタンの基準 */
+    position: relative;
+}
+
+.footer-logo{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.footer-text{
+    font-size: 12px;
+    text-align: center;
+
+    @include mixin.mq('pc'){
+        margin-top: 12px;
+    }
+}
+
+.footer-nav-list{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 40px;
+    padding: 0 20px;
+
+    @include mixin.mq('pc'){
+        gap: 40px;
+    }
+}
+
+.footer-nav-img{
+    width: 56px;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-nav-link-text{
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.copyright{
+    margin-top: 46px;
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid variable.$border-beige;
+}
+
+.copyright-text{
+    font-size: 12px;
+
+    // copyright-text
+    @include mixin.mq('pc'){
+        font-size: 13px;
+    }
+}
+
+
+//media
+
+// footer-nav-list
+
+

@@ -1,0 +1,37 @@
+@use "variable";
+@use "button";
+@use "mixin";
+
+/* ドロワーメニュー */
+
+.drawer{
+    /* ドロワーメニューの背景 */
+    background: variable.$color-black-t40;
+    padding: 12px;
+    /* positionを使ってヘッダーの下に表示させる */
+    position: absolute;
+    top: 64px;
+    /* デフォルトで非表示 */
+    display: none;
+}
+
+.drawer-list{
+    /* ドロワーメニューの文字を中央揃え */
+    text-align: center;
+}
+
+.drawer-link{
+    /* ドロワーメニューの文字 */
+    color: rgba(255, 255, 255, .9); 
+    font-size: 14px;
+    transition: opacity .3s;
+}
+
+.drawer-link:hover{
+    opacity: .7;
+}
+
+.drawer-item{
+    /* ドロワーメニューの文字の間隔 */
+    margin-top: 8px;
+}

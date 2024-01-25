@@ -1,0 +1,63 @@
+@use "variable";
+@use "button";
+@use "mixin";
+
+/* aboutセクション */
+
+
+.about{
+    background-color: variable.$page-background;
+    padding: 40px 0;
+
+    @include mixin.mq('pc'){
+        padding: 100px 0;
+    }
+}
+
+.about-contents{
+    margin-top: 40px;
+
+    @include mixin.mq('pc'){
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+    }
+}
+
+.about-text-contents{
+    margin-top: 20px;
+
+    @include mixin.mq('pc'){
+        margin-top: 0;
+    }
+}
+
+.about-text{
+    font-size: 14px;
+    line-height: 2;
+
+    @include mixin.mq('pc'){
+        font-size: 15px;
+    }
+}
+
+.about-text + .about-text{
+    margin-top: 16px;
+
+    @include mixin.mq('pc'){
+        margin-top: 30px;
+    }
+}
+
+.about-img{
+    @include mixin.mq('pc'){
+        width: 300px;
+    }
+}
+
+
+
+
+

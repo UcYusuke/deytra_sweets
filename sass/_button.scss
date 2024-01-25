@@ -1,0 +1,22 @@
+
+/* トップへ戻るボタン */
+.button-to-top{
+    font-weight: bold;
+    width: 56px;
+    height: 56px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity .3s;
+    /* ページ右下へ固定配置 */
+    position: fixed;
+    right: 20px;
+    bottom: 32px;
+
+    &:hover{
+        opacity: .7;
+    }
+
+}
+

@@ -1,0 +1,55 @@
+@use "variable";
+@use "button";
+@use "mixin";
+
+body{
+    font-family: 'Josefin Sans', 'Noto Sans JP', sans-serif;
+    color: rgb(60, 48, 30);
+    letter-spacing: 0.05em;
+}
+
+img{
+    width: 100%;
+}
+
+/* 共通パーツ */
+
+.inner{
+    padding: 0 40px;
+
+    @include mixin.mq('pc'){
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+}
+
+.section-heading{
+    text-align: center;
+}
+
+.section-heading-l{
+    color: #fff;
+}
+
+.section-heading-main{
+    display: block;
+    font-size: 40px;
+
+    @include mixin.mq('pc'){
+        font-size: 64px;
+    }
+}
+
+.section-heading-sub{
+    display: block;
+    font-size: 12px;
+
+    @include mixin.mq('pc'){
+        font-size: 12px;
+    }
+}
+
+
+
+
+
